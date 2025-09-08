@@ -1,0 +1,29 @@
+﻿<MudDialog>
+    <DialogContent>
+        <MudStack>
+            <MudButton @onclick="() => Submit()" Style="min-height: 800px">
+
+                <MudImage Src="@GetImageFile()" Class="m-auto"></MudImage>
+            </MudButton>
+
+        </MudStack>
+    </DialogContent>
+    <DialogActions>
+        <MudButton Color="Color.Primary" OnClick="Submit">Close</MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    [CascadingParameter]
+    private IMudDialogInstance MudDialog { get; set; } 
+
+    private void Submit() => MudDialog.Close(DialogResult.Ok(true));
+    
+    [Parameter]
+    public double ImageId { get; set; }
+
+    public string GetImageFile()
+    {
+        return ImageId + ".jpg";
+    }
+}

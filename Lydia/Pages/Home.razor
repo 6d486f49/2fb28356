@@ -1,0 +1,109 @@
+﻿@page "/"
+@inject IDialogService DialogService
+
+<PageTitle>Welcome</PageTitle>
+
+<MudContainer Class="mt-16">
+    <MudStack>
+        <MudPaper Class="pa-16 ma-2">
+            <MudStack>
+                <MudText Typo="Typo.h2" Align="Align.Center">Copper, Tin, Wood and Canvas Art</MudText>
+
+                <MudButton @onclick="() => OpenDialogAsync(1)">
+                    <MudImage Src="1.jpg" Style="max-height: 60%; max-width: 40%" Class="m-auto"></MudImage>
+                </MudButton>
+
+                <MudText Typo="Typo.h1">Welcome</MudText>
+
+                <MudText Typo="Typo.body1">
+                    This site is dedicated to my lovely mother who had an artistic flare, she passed away in 2018.
+                    There's much
+                    to see here. Her love for art. So, take your time, look around, all there is to know about her
+                    passion. I
+                    hope you enjoy the site and take a moment to drop me a line.
+                </MudText>
+
+                <MudText Typo="Typo.body2">
+                    Lydia Kokline
+                </MudText>
+                <MudText Typo="Typo.body2">
+                    lkokline@gmail.com
+                </MudText>
+                <MudText Typo="Typo.body2">
+                    613-323-2941
+                </MudText>
+            </MudStack>
+        </MudPaper>
+        
+
+        <MudPaper Class="pa-16 ma-2">
+            <MudStack>
+
+                <MudText Typo="Typo.h1">About the Artist</MudText>
+
+                <MudButton @onclick="() => OpenDialogAsync(2.1)"  >
+                    <MudStack Row="true">
+                        <MudImage Width="500" Src="2.1.jpg" Class="m-auto"></MudImage>
+                        <MudStack>
+                            <MudText Typo="Typo.h2"  Align="Align.Left">Her Background</MudText>
+                            <MudText Typo="Typo.body1"  Align="Align.Left">
+                                Having studied at Brussels "Academie Royale des Beaux Arts" three years under Master G.
+                                de Vlamyneck, she won a first prize, awarded her by the Burgomaster of the City of
+                                Brussels in 1949.
+                            </MudText>
+                        </MudStack>
+                    </MudStack>
+                </MudButton>
+
+                <MudButton @onclick="() => OpenDialogAsync(2.2)">
+                <MudStack Row="true" AlignItems="AlignItems.Start">
+                    
+                    <MudImage Width="500" Src="2.2.jpg" Class="m-auto"></MudImage>
+                    
+                    <MudStack>
+                        <MudText Typo="Typo.h2" Align="Align.Left">Her Medium</MudText>
+                        <MudText Typo="Typo.body1" Align="Align.Left">
+                            She used many different mediums, such as poker-works, wood-sculpturing, oils, copper, tin
+                            acrylics on canvas and water colors . She believes that working in a single medium was
+                            restrictive to her artistic process.
+                        </MudText>
+                    </MudStack>
+                </MudStack>
+                </MudButton>
+
+                <MudButton @onclick="() => OpenDialogAsync(2.3)">
+                <MudStack Row="true">
+                        <MudImage Width="500" Src="2.3.jpg" Class="m-auto"></MudImage>
+                    <MudStack>
+                        <MudText Typo="Typo.h2" Align="Align.Left">Her Inspiration</MudText>
+                        <MudText Typo="Typo.body1" Align="Align.Left">
+                            She enjoyed her art. Some of her inspiration came from visions in frosted windows, trees,
+                            flowers and her beliefs, which she would replicate them into paintings.
+                        </MudText>
+                    </MudStack>
+                </MudStack>
+                </MudButton>
+
+            </MudStack>
+        </MudPaper>
+
+
+    </MudStack>
+</MudContainer>
+
+
+@code {
+
+    private Task OpenDialogAsync(double imageId)
+    {
+        var parameters = new DialogParameters<ImageDialog>
+        {
+            { x => x.ImageId, imageId }
+        };
+
+        var options = new DialogOptions { FullScreen = true, CloseButton = true, CloseOnEscapeKey = true };
+
+        return DialogService.ShowAsync<ImageDialog>("", parameters, options);
+    }
+
+}
