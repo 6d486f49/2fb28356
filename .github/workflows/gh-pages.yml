@@ -20,11 +20,6 @@ jobs:
         with:
           dotnet-version: 8.0.x
 
-      # Install NPM dependencies
-      - name: Install NPM dependencies
-        working-directory: ./Lydia
-        run: npm i
-
       # Publish the site
       - name: Publish
         run: dotnet publish ./Lydia/Lydia.csproj -c:Release -o:publish -p:GHPages=true
