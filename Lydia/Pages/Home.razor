@@ -81,6 +81,7 @@
         
         <MudPaper Class="pa-16 ma-2">
             <MudStack>
+                <MudText Typo="Typo.h1">Background</MudText>
                 <MudButton @onclick="() => OpenDialogAsync(3)">
                     <MudImage Src="3.jpg" Style="max-height: 60%; max-width: 40%" Class="m-auto"></MudImage>
                 </MudButton>
@@ -96,7 +97,65 @@
                 </MudText>
             </MudStack>
         </MudPaper>
+        
+        
+        
+        
+        <MudPaper Class="pa-16 ma-2">
+            <MudStack>
+                <MudButton @onclick="() => OpenDialogAsync(4)">
+                    <MudImage Src="4.jpg" Style="max-width: 50%" Class="m-auto"></MudImage>
+                </MudButton>
+                <MudText Typo="Typo.subtitle1">Graduation day</MudText>
+                <MudText Typo="Typo.h2">History</MudText>
+                <MudText Typo="Typo.body1">
+                    <ul>
+                        <li>Born in Lithuanie - Kaunas - 1923</li>
+                        <li>Spoke 7 languages</li>
+                        <li>February 1949, she got married to a Doctor who majored in chemistry/physics and graduated from the Catholic University of Louvain</li>
+                        <li>Together they immigrated to Canada in 1951</li>
+                        <li>They had 5 children. All girls have inherited the artistic flare</li>
+                    </ul>
+                </MudText>
+            </MudStack>
+        </MudPaper>
 
+        <MudPaper Class="pa-16 ma-2">
+            <MudStack>
+                <MudText Typo="Typo.h1">Portfolio - History</MudText>
+                <MudButton @onclick="() => OpenDialogAsync(5)">
+                    <MudImage Src="5.jpg" Style="max-width: 66%" Class="m-auto"></MudImage>
+                </MudButton>
+                <MudText Typo="Typo.body2">
+                    "Mme Elèna Kokline et sa dernière toile qui symbolise ses amours et ses impression du Sénégal: le baobab, le soleil l'antilope et la biche sculptée. En observan bien les branches du baobab vous decouvriez les tête d'antilopes et de biches qu'une main parfois étreint. Cette main est cell de l'artiste." — <b>News paper clipping 1974</b>
+                </MudText>
+            </MudStack>
+        </MudPaper>
+        
+        <MudPaper Class="pa-16 ma-2">
+            <MudStack>
+                <MudButton @onclick="() => OpenDialogAsync(6)">
+                    <MudImage Src="6.jpg" Style="max-width: 50%" Class="m-auto"></MudImage>
+                </MudButton>
+                <MudText Typo="Typo.body1">
+                    Diploma - Ville de Brusxelles. Academie royale des beaux-arts et école des arts décoratifs. Was awarded to her by the Burgomaster of the City of Brussels in 1949.
+                </MudText>
+            </MudStack>
+        </MudPaper>
+        
+    <MudStack>
+        <MudText Typo="Typo.body1" Align="Align.Center">
+            <b>More to come</b>
+        </MudText>
+        
+        <MudText Typo="Typo.body1" Align="Align.Center">
+            . . .
+        </MudText>
+        
+        <MudText Typo="Typo.body1" Align="Align.Center">
+            <br/><br/>
+        </MudText>
+    </MudStack>
 
     </MudStack>
 </MudContainer>
