@@ -9,7 +9,7 @@
 
 
 @* Required *@
-<MudThemeProvider  Theme="@MyCustomTheme"/>
+<MudThemeProvider Theme="@MyCustomTheme"/>
 <MudPopoverProvider/>
 
 @* Needed for dialogs *@
@@ -20,23 +20,20 @@
 
 
 @code {
-    MudTheme MyCustomTheme = new()
+
+    readonly MudTheme MyCustomTheme = new()
     {
-          
-        
-        Typography = new Typography()
+        Typography = new Typography
         {
-            
-            H1 = new H2Typography()
+            H1 = new H2Typography
             {
-                FontSize = "2.00rem",
-                
+                FontSize = "2.00rem"
             },
-            H2 = new H2Typography()
+            H2 = new H2Typography
             {
-                FontSize = "1.65rem",
-                
+                FontSize = "1.65rem"
             }
         }
     };
+
 }
