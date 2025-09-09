@@ -1,8 +1,7 @@
 ﻿@page "/"
 @page "/welcome"
-@inject IDialogService DialogService
 
-<PageTitle>Welcome</PageTitle>
+<PageTitle>Elena Kokline</PageTitle>
 
 <MudHidden Breakpoint="Breakpoint.MdAndDown">
     <Wide></Wide>
@@ -12,19 +11,3 @@
     <Mobile></Mobile>
 </MudHidden>
 
-
-@code {
-
-    private Task OpenDialogAsync(double imageId)
-    {
-        var parameters = new DialogParameters<ImageDialog>
-        {
-            { x => x.ImageId, imageId }
-        };
-
-        var options = new DialogOptions { FullScreen = true, CloseButton = true, CloseOnEscapeKey = true };
-
-        return DialogService.ShowAsync<ImageDialog>("", parameters, options);
-    }
-
-}
