@@ -617,20 +617,103 @@
         </MudPaper>
 
 
-        <MudStack>
-            <MudText Typo="Typo.body1" Align="Align.Center">
-                <b>More to come</b>
-            </MudText>
-
-            <MudText Typo="Typo.body1" Align="Align.Center">
-                . . .
-            </MudText>
-
-            <MudText Typo="Typo.body1" Align="Align.Center">
-                <br/><br/>
-            </MudText>
-        </MudStack>
-
+        <MudPaper Class="pa-16 ma-2">
+            <MudStack>
+                <MudText Typo="Typo.h1">Tools</MudText>
+                <MudButton @onclick="() => OpenDialogAsync(34.1)">
+                    <MudStack Row="true">
+                        <MudImage Width="500" Style="max-width: 50%" Src="34.1.webp" Class="m-auto"></MudImage>
+                        <MudStack>
+                            <MudText Typo="Typo.h2" Align="Align.Left">X-acto knifes and tools</MudText>
+                            <MudText Typo="Typo.body1" Align="Align.Left">
+                                The tools used by my mom when she was creating her artwork. Many hours spent using those
+                                tools and no injuries ... well none that I knew of.
+                            </MudText>
+                        </MudStack>
+                    </MudStack>
+                </MudButton>
+                <MudButton @onclick="() => OpenDialogAsync(34.2)">
+                    <MudStack Row="true" AlignItems="AlignItems.Start">
+                        <MudImage Width="500" Style="width: 500px; max-width: 50%" Src="34.2.webp"
+                                  Class="m-auto"></MudImage>
+                        <MudStack>
+                            <MudText Typo="Typo.h2" Align="Align.Left">Price list in 1956</MudText>
+                            <MudText Typo="Typo.body1" Align="Align.Left">
+                                Back in the good old days! That's what you call prices.  Today the prices start at $4.00
+                                and up for one x-acto knife.
+                            </MudText>
+                        </MudStack>
+                    </MudStack>
+                </MudButton>
+            </MudStack>
+            
+        </MudPaper>
+        <MudPaper Class="pa-16 ma-2">
+            <MudStack>
+                <MudButton @onclick="() => OpenDialogAsync(35)">
+                    <MudImage Src="35.webp" Style="max-width: 50%" Class="m-auto"></MudImage>
+                </MudButton>
+                <MudText Typo="Typo.body1">
+                    Instruction sheet, cropped to size.
+                </MudText>
+                <MudText Typo="Typo.body1">
+                    Things to do with your x-acto knives and tools.
+                </MudText>
+                <MudText Typo="Typo.body1">
+                    Original wooden box of x-acto knifes. Survived all those years and more to go.
+                </MudText>
+            </MudStack>
+        </MudPaper>
+        <MudPaper Class="pa-16 ma-2">
+            <MudStack>
+                <MudText Typo="Typo.h1">
+                    Carving knifes
+                </MudText>
+                <MudText Typo="Typo.body1">
+                    Some additional tools that she used. Metal files, poker-knife and even a sharp screwdriver.
+                </MudText>
+                <MudStack Row="true">
+                    <MudButton @onclick="() => OpenDialogAsync(36.1)">
+                        <MudImage Width="800" Style="max-width: 50%" Src="36.1.webp" Class="m-auto"></MudImage>
+                    </MudButton>
+                    <MudButton @onclick="() => OpenDialogAsync(36.2)">
+                        <MudImage Width="800" Style="max-width: 50%" Src="36.2.webp" Class="m-auto"></MudImage>
+                    </MudButton>
+                </MudStack>
+                <MudText Typo="Typo.body1">
+                    Carving Knifes still as good as new and very sharp. Used on all the woodwork she did.
+                </MudText>
+            </MudStack>
+        </MudPaper>
+        <MudPaper Class="pa-16 ma-2">
+            <MudStack>
+                <MudText Typo="Typo.h1">
+                    Embossed tools
+                </MudText>
+                <MudButton @onclick="() => OpenDialogAsync(37)">
+                    <MudImage Style="max-width: 50%" Src="37.webp" Class="m-auto"></MudImage>
+                </MudButton>
+                <MudText Typo="Typo.body1">
+                    These are the tools that she used, when she used the push-back method on copper and tin. 
+                </MudText>
+                <MudText Typo="Typo.body1">
+                    I say push-back because it took a lot of energy pushing the copper or tin on a semi-soft surface for
+                    every detail and definition to protrude without going through the copper or tin. 
+                </MudText>
+            </MudStack>
+        </MudPaper>
+        <MudPaper Class="pa-16 ma-2">
+            <MudStack>
+                <MudText Typo="Typo.h2">No longer available</MudText>
+                <MudButton @onclick="() => OpenDialogAsync(38.1)">
+                    <MudImage Src="38.1.webp" Style="max-width: 50%" Class="m-auto"></MudImage>
+                </MudButton>
+                <MudButton @onclick="() => OpenDialogAsync(38.2)">
+                    <MudImage Src="38.2.webp" Style="max-width: 50%" Class="m-auto"></MudImage>
+                </MudButton>
+                <MudText Typo="Typo.subtitle1" Align="Align.Center">Querelle / Quarrel</MudText>
+            </MudStack>
+        </MudPaper>
     </MudStack>
 </MudContainer>
 
